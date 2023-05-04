@@ -3,4 +3,4 @@ WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt
 EXPOSE 5000
-CMD ["python3", "/app/flask-website.py"]
+CMD ["python3", "/app/Flask website/flask-website.py"]
