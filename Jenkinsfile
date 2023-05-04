@@ -14,17 +14,9 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build imagename
+          sh "docker build ."
         }
       }
     }
-    stage('Running Image') {
-      steps{
-        script {
-          sh "docker run ${imagename}:latest"
-          }
-        }
-      }
-    }
-    
+}
 }
