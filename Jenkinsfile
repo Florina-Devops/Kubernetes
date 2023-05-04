@@ -21,7 +21,7 @@ pipeline {
     stage('Running Image') {
       steps{
         script {
-          sh "docker run ${imagename}:latest"
+          sh "docker run -d -p 5000:1234 --name jenkinstest-container ${imagename}:latest"
           }
         }
       }
